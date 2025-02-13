@@ -1,0 +1,9 @@
+<div class="mb-3">
+  <label for="select-empleados" class="form-label">Selecciona un empleado</label>
+  <select class="form-select" name="select-empleados" id="select-empleados">
+    <option value="" disabled selected>Selecciona un empleado</option>
+    <option *ngFor="let empleado of empleados" [value]="empleado.id">
+      {{ empleado.nombre }}
+    </option>
+  </select>
+</div>
