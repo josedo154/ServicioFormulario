@@ -1,7 +1,6 @@
 import { Cliente } from "./cliente";
 
 export class Evento {
-  static contadorId = 100;
   id: number;
   cliente: Cliente;
   titulo: string;
@@ -9,10 +8,8 @@ export class Evento {
   clasificacion: string;
   fecha: string;
 
-  constructor(cliente: Cliente, titulo: string, description: string, clasificacion: string) {
-    this.id = Evento.contadorId;
-    Evento.contadorId++;
-
+  constructor(id:number,  cliente: Cliente, titulo: string, description: string, clasificacion: string) {
+    this.id = id;
     this.cliente = cliente;
     this.titulo = titulo;
     this.description = description;

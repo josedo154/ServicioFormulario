@@ -1,4 +1,14 @@
-<h1>Tienda para Gatos</h1>
-<app-lista-empleados></app-lista-empleados>
+<header class="bg-primary text-white p-3 d-flex align-items-center justify-content-between">
+  <h2 class="m-0">EventReporting</h2>
+  <app-select-empleados></app-select-empleados>
+</header>
 
-<router-outlet />
+<div class="container mt-4 d-flex justify-content-between">
+  <app-menu class="col-4"></app-menu>
+  <app-formulario-eventos class="col-8"></app-formulario-eventos>
+</div>
+
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>
+

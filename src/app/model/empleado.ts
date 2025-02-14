@@ -1,11 +1,9 @@
 export class Empleado {
-  static contadorId = 100;
   id: number;
   nombre: string;
 
-  constructor(nombre: string) {
+  constructor(id: number, nombre: string) {
+    this.id = id;
     this.nombre = nombre;
-    this.id = Empleado.contadorId;
-    Empleado.contadorId++;
   }
 }
