@@ -1,5 +1,9 @@
 <div class="col-4 bg-light p-3 rounded-3">
   <h3>Menu</h3>
-  <button class="btn btn-outline-primary w-100 mb-2">Formulario Evento</button>
-  <button class="btn btn-outline-primary w-100 mb-2">Ver Evento</button>
+  <button class="btn btn-outline-primary w-100 mb-2" (click)="cambiarModo('crearFormulario')">
+    Formulario Evento
+  </button>
+  <button class="btn btn-outline-primary w-100 mb-2" (click)="cambiarModo('verFormulario')">
+    Ver Evento
+  </button>
 </div>
