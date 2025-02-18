@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormControl, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 
 @Component({
@@ -6,7 +7,10 @@ import { ReactiveFormsModule, FormControl, FormGroup, Validators, AbstractContro
   standalone: true,
   templateUrl: './formulario-eventos.component.html',
   styleUrl: './formulario-eventos.component.css',
-  imports: [ReactiveFormsModule]
+  imports: [
+    ReactiveFormsModule,
+    CommonModule,
+  ]
 })
 export class FormularioEventosComponent {
   formulario = new FormGroup({
