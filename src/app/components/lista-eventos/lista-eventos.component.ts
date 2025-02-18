@@ -1,11 +1,16 @@
 import {Component, OnInit} from '@angular/core';
+import {CommonModule, NgClass} from '@angular/common';
 import {Evento} from '../../model/evento';
-import {EmpleadosService} from '../../services/empleados.service';
 import {EventosService} from '../../services/eventos.services';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-lista-eventos',
-  imports: [],
+  imports: [
+    CommonModule,
+    NgClass,
+    FormsModule
+  ],
   templateUrl: './lista-eventos.component.html',
   standalone: true,
   styleUrl: './lista-eventos.component.css'
@@ -13,6 +18,7 @@ import {EventosService} from '../../services/eventos.services';
 
 export class ListaEventosComponent implements OnInit{
   eventos: Evento[] = [];
+  categoriaSeleccionada: string = '';
 
   constructor(private eventoService: EventosService) {}
 

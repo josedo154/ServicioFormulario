@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "cliente": {
+      "id": 100,
+      "nombre": "Pedro Sánchez"
+    },
+    "empleado": {
+      "id": 2,
+      "nombre": "María López"
+    },
+    "titulo": "Revisión de Proyecto",
+    "description": "Se revisará el estado actual del proyecto.",
+    "clasificacion": "log",
+    "fecha": "2025-03-01"
+  },
+  {
+    "id": 2,
+    "cliente": {
+      "id": 101,
+      "nombre": "Laura Fernández"
+    },
+    "empleado": {
+      "id": 4,
+      "nombre": "Ana Torres"
+    },
+    "titulo": "Capacitación Interna",
+    "description": "Sesión de capacitación sobre nuevas herramientas.",
+    "clasificacion": "warn",
+    "fecha": "2025-03-05"
+  },
+  {
+    "id": 3,
+    "cliente": {
+      "id": 102,
+      "nombre": "Javier Morales"
+    },
+    "empleado": {
+      "id": 1,
+      "nombre": "Juan Pérez"
+    },
+    "titulo": "Evaluación de Desempeño",
+    "description": "Revisión de desempeño del equipo de desarrollo.",
+    "clasificacion": "error",
+    "fecha": "2025-03-10"
+  }
+]

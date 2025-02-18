@@ -1,0 +1,10 @@
+<div class="w-full flex flex-col items-center justify-center">
+  <div *ngIf="mode == 'crearFormulario'" class="w-full     ">
+    <app-formulario-eventos></app-formulario-eventos>
+  </div>
+
+  <div *ngIf="mode == 'verFormulario'" class="w-full     ">
+    <app-lista-eventos></app-lista-eventos>
+  </div>
+</div>
+

@@ -40,5 +40,13 @@ export class EventosService {
         )
       );
   }
+
+  getEventosPorCategoria(categoriaSeleccionada: string): Observable<Evento[]> {
+    return this.getEventos().pipe(
+      map(eventos =>
+        eventos.filter(evento => evento.clasificacion === categoriaSeleccionada)
+      )
+    );
+  }
 }
 

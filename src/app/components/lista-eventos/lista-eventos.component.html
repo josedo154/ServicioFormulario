@@ -1,1 +1,59 @@
-<p>lista-eventos works!</p>
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Lista de Eventos</h2>
+
+  <form class="container mt-4 p-4 border rounded-3 shadow-sm">
+    <div class="mb-3">
+      <label for="categoria" class="form-label fw-bold">Selecciona el tipo de reporte:</label>
+      <select id="categoria" class="form-select" [(ngModel)]="categoriaSeleccionada">
+        <option value="">Todas</option>
+        <option value="log">Log</option>
+        <option value="warn">Warning</option>
+        <option value="error">Error</option>
+      </select>
+    </div>
+
+  </form>
+
+
+  <div *ngIf="eventos.length > 0; else sinEventos">
+    <div class="table-responsive">
+      <table class="table table-striped table-hover">
+        <thead class="table-primary">
+        <tr>
+          <th>ID</th>
+          <th>Cliente</th>
+          <th>Empleado</th>
+          <th>Título</th>
+          <th>Descripción</th>
+          <th>Clasificación</th>
+          <th>Fecha</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let evento of eventos">
+          <td>{{ evento.id }}</td>
+          <td>{{ evento.cliente.nombre }}</td>
+          <td>{{ evento.empleado.nombre }}</td>
+          <td>{{ evento.titulo }}</td>
+          <td>{{ evento.description }}</td>
+          <td>
+            <button class="btn btn-sm"
+                    [ngClass]="{
+                  'btn-success': evento.clasificacion === 'log',
+                  'btn-warning text-dark': evento.clasificacion === 'warn',
+                  'btn-danger': evento.clasificacion === 'error'
+                }">
+              {{ evento.clasificacion }}
+            </button>
+          </td>
+          <td>{{ evento.fecha }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <ng-template #sinEventos>
+    <p class="text-center text-muted">No hay eventos registrados.</p>
+  </ng-template>
+</div>

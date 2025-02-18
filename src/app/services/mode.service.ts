@@ -9,7 +9,7 @@ export class ModeService {
   mode$ = this.modeSubject.asObservable();
 
   cambiarMode(nuevoMode: string) {
-    console.log(nuevoMode+"Prueba exitosamente");
     this.modeSubject.next(nuevoMode);
+    console.log(nuevoMode+"Prueba exitosamente: "+this.modeSubject.value);
   }
 }
